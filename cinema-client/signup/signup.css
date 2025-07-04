@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.register-container {
+    width: 100%;
+    max-width: 450px;
+}
+
+.register-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 3rem 2.5rem;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+.logo-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.logo-subtitle {
+    color: #a0a0a0;
+    font-size: 1rem;
+}
+
+.welcome-text {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.welcome-text h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.welcome-text p {
+    color: #a0a0a0;
+    font-size: 0.95rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #4ecdc4;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #4ecdc4;
+    box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.1);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.form-input::placeholder {
+    color: #a0a0a0;
+}
+
+
+.form-input[type="date"] {
+    color: #a0a0a0;
+}
+
+.form-input[type="date"]:focus,
+.form-input[type="date"]:valid {
+    color: white;
+}
+
+.form-input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.terms-section {
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+.terms-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    color: #a0a0a0;
+}
+
+.terms-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #4ecdc4;
+    margin-top: 2px;
+}
+
+.terms-checkbox label {
+    color: #a0a0a0;
+    line-height: 1.4;
+}
+
+.terms-checkbox a {
+    color: #4ecdc4;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.terms-checkbox a:hover {
+    color: #45b7d1;
+}
+
+.btn {
+    width: 100%;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    color: white;
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(255, 107, 107, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    color: #a0a0a0;
+}
+
+.login-link a {
+    color: #4ecdc4;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+    color: #45b7d1;
+}
+
+
+.response-message {
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-align: center;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.success-message {
+    background-color: rgba(78, 205, 196, 0.2); 
+    color: #4ecdc4;
+    border: 1px solid #4ecdc4;
+}
+
+.error-message {
+    background-color: rgba(255, 107, 107, 0.2); 
+    border: 1px solid #ff6b6b;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 0.5rem;
+    }
+
+    .register-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .welcome-text h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .register-card {
+        padding: 1.5rem 1rem;
+        border-radius: 20px;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    .welcome-text h1 {
+        font-size: 1.3rem;
+    }
+
+    .form-input {
+        padding: 14px 16px;
+        font-size: 0.95rem;
+    }
+
+    .btn {
+        padding: 14px 20px;
+        font-size: 0.95rem;
+    }
+
+    .terms-checkbox {
+        font-size: 0.85rem;
+    }
+}

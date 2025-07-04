@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="viewProfile.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="viewProfile.js"></script>
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="floating-shape shape-4"></div>
+    </div>
+
+ 
+    <div class="profile-container">
+     
+        <div class="profile-header">
+            <div class="logo">🎬 CinemaBook</div>
+            <h1 class="page-title">My Profile</h1>
+            <p class="page-subtitle">Manage your personal information and preferences</p>
+        </div>
+
+        <div class="profile-card">
+            <h2 class="section-title">
+                👤 Personal Information
+            </h2>
+            
+            <form id="profileForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname" class="form-input" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-input" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number</label>
+                        <input type="tel" id="mobile" class="form-input" placeholder="Enter your mobile number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">New Password</label>
+                        <input type="password" id="password" class="form-input" placeholder="Enter new password (leave blank to keep current)">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+     
+        <div class="profile-card">
+            <h2 class="section-title">
+                ℹ️ Account Information
+            </h2>
+            
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="membershipLevel">Membership Level</label>
+                    <input type="text" id="membershipLevel" class="form-input readonly-field" value="Standard Member" disabled>
+                    <span id="membershipBadge" class="info-badge badge-standard">Standard</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="ageVerified">Age Verification Status</label>
+                    <input type="text" id="ageVerified" class="form-input readonly-field" value="Not Verified" disabled>
+                    <span id="ageVerifiedBadge" class="info-badge badge-unverified">Not Verified</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="createdAt">Member Since</label>
+                    <input type="text" id="createdAt" class="form-input readonly-field" value="January 2024" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label for="communicationPrefs">Communication Preferences</label>
+                    <select id="communicationPrefs" class="form-input">
+                        <option value="email">Email Only</option>
+                        <option value="sms">SMS Only</option>
+                        <option value="both">Email & SMS</option>
+                        <option value="none">None</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="account-actions">
+            <button type="button" id="saveChangesBtn" class="btn btn-primary">Save Changes</button>
+            <a href="../home/home.html" class="btn btn-secondary">Cancel</a>
+            <button " id="deleteAccountBtn" type="button" class="btn btn-danger">Delete Account</button>
+        </div>
+    </div>
+</body>
+</html>
