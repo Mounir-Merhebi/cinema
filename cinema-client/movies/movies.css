@@ -14,7 +14,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Navigation Bar */
 .navbar {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
@@ -73,7 +72,6 @@ body {
     background: rgba(78, 205, 196, 0.15);
 }
 
-/* Search Bar */
 .search-container {
     position: relative;
     max-width: 400px;
@@ -120,14 +118,14 @@ body {
     transform: translateY(-50%) scale(1.05);
 }
 
-/* Main Container */
+
 .main-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
 }
 
-/* Page Header */
+
 .page-header {
     text-align: center;
     margin-bottom: 3rem;
@@ -149,7 +147,7 @@ body {
     margin-bottom: 2rem;
 }
 
-/* Movies Section */
+
 .movies-section {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
@@ -178,7 +176,7 @@ body {
     text-align: center;
 }
 
-/* Movies Grid */
+
 .movies-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -280,7 +278,7 @@ body {
     box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
 }
 
-/* Cast Section */
+
 .cast-section {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 1.5rem;
@@ -301,7 +299,6 @@ body {
 
 
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .nav-container {
         flex-direction: column;

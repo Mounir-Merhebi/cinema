@@ -132,7 +132,6 @@ body {
     cursor: not-allowed;
 }
 
-/* Select dropdown styling */
 select.form-input {
     color: white;
     background-color: rgba(255, 255, 255, 0.1);
@@ -251,7 +250,7 @@ select.form-input:focus option {
     margin-top: 2rem;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .profile-card {
         padding: 2rem 1.5rem;

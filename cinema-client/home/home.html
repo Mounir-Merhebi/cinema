@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CinemaBook - Home</title>
     <link rel="stylesheet" href="home.css">
-    <!-- Axios for simpler AJAX requests -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="home.js" defer></script> <!-- Link to the new home.js and defer its execution -->
+    <script src="home.js" defer></script> 
 </head>
 <body>
-  <!-- Navigation Bar -->
   <nav class="navbar">
     <div class="nav-container">
         <a href="#" class="logo">🎬 CinemaBook</a>
@@ -31,15 +29,12 @@
     </div>
 </nav>
 
-<!-- Main Container -->
 <div class="main-container">
-    <!-- Hero Section -->
     <div class="hero-section">
         <h1 class="hero-title">Welcome to CinemaBook</h1>
         <p class="hero-subtitle">Your ultimate destination for movie bookings and entertainment</p>
     </div>
 
-    <!-- Quick Actions -->
     <div class="quick-actions">
         <a href="#" class="action-card">
             <div class="action-icon">🎭</div>
@@ -66,15 +61,11 @@
         </a>
     </div>
 
-    <!-- All Movies Section -->
     <div class="movies-section">
         <h2 class="section-title">
             🎬 All Movies
-        </h2>
-        
-        <!-- Movies Grid - Data will be populated from database by home.js -->
-        <div class="movies-grid">
-            <!-- Movies will be loaded here dynamically by home.js -->
+        </h2> 
+        <div class="movies-grid"
             <p class="text-white text-center col-span-full">Loading movies...</p>
         </div>
     </div>

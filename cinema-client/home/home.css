@@ -14,7 +14,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Navigation Bar */
+
 .navbar {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
@@ -68,7 +68,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* Search Bar */
+
 .search-container {
     position: relative;
     max-width: 400px;
@@ -115,14 +115,13 @@ body {
     transform: translateY(-50%) scale(1.05);
 }
 
-/* Main Container */
+
 .main-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 3rem 2rem;
 }
 
-/* Hero Section */
 .hero-section {
     text-align: center;
     margin-bottom: 4rem;
@@ -144,7 +143,6 @@ body {
     margin-bottom: 2rem;
 }
 
-/* Quick Actions */
 .quick-actions {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -187,7 +185,7 @@ body {
     font-size: 0.9rem;
 }
 
-/* Movies Section */
+
 .movies-section {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
@@ -219,7 +217,6 @@ body {
     gap: 0.5rem;
 }
 
-/* Movies Grid */
 .movies-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -321,7 +318,6 @@ body {
     box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
 }
 
-/* Cast Section */
 .cast-section {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 1.5rem;
@@ -340,7 +336,7 @@ body {
     line-height: 1.4;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .nav-container {
         flex-direction: column;

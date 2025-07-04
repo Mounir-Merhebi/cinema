@@ -1,9 +1,7 @@
-// Function to fetch movies from the backend and display them on the homepage
+
 async function fetchAndDisplayHomeMovies() {
     const moviesGrid = document.querySelector('.movies-grid');
     
-
-    // Clear any existing content and show a loading indicator
     moviesGrid.innerHTML = '<p class="text-white text-center col-span-full">Loading movies...</p>';
 
     try {
@@ -11,27 +9,21 @@ async function fetchAndDisplayHomeMovies() {
         const data = response.data;
 
         if (data.success && data.movies.length > 0) {
-            moviesGrid.innerHTML = ''; // Clear loading message
+            moviesGrid.innerHTML = ''; 
 
             data.movies.forEach(movie => {
-                // Create a movie card element
                 const movieCard = document.createElement('div');
                 movieCard.classList.add('movie-card');
-
-                // Sanitize and escape data to prevent XSS
                 const title = escapeHTML(movie.title);
                 const description = escapeHTML(movie.description);
                 const releaseDate = escapeHTML(movie.release_date);
                 const rating = escapeHTML(movie.rating);
-                // Use a placeholder if posterUrl is empty or invalid
                 const posterUrl = movie.poster_url && movie.poster_url.trim() !== ''
                                   ? escapeHTML(movie.poster_url)
                                   : 'https://placehold.co/400x600/0f0f23/ffffff?text=No+Poster'; // Placeholder image
 
                 const cast = escapeHTML(movie.cast);
                 const trailerLink = escapeHTML(movie.trailer_link);
-
-                // Populate the movie card with data
                 movieCard.innerHTML = `
                     <div class="movie-poster" style="background-image: url('${posterUrl}');"></div>
                     
@@ -50,8 +42,6 @@ async function fetchAndDisplayHomeMovies() {
                         <div class="cast-text">${cast}</div>
                     </div>
                 `;
-                // Description can be conditionally added if needed, or directly included if always present
-                // Adding a check for description length to prevent huge blocks of text
                 if (description.length > 0) {
                     movieCard.querySelector('.cast-section').insertAdjacentHTML('beforebegin', `<div class="movie-description">${description}</div>`);
                 }
@@ -71,12 +61,9 @@ async function fetchAndDisplayHomeMovies() {
     }
 }
 
-// Simple HTML escaping function to prevent XSS
 function escapeHTML(str) {
     const div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
 }
-
-// Call the function when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', fetchAndDisplayHomeMovies);

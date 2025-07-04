@@ -29,17 +29,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 messageDisplay.textContent = responseData.message;
                 messageDisplay.classList.add('success-message');
                 
-                // --- MODIFIED PART ---
-                // Store the user ID in Local Storage
                 if (responseData.userId) {
                     localStorage.setItem('userId', responseData.userId); 
                 } else {
                     console.warn("Login successful, but userId not received in response. This might cause issues later.");
                 }
 
-                // Redirect to the home page (assuming home.html is the correct file in the 'home' folder)
+               
                 window.location.href = '../home/home.html'; 
-                // --- END MODIFIED PART ---
+               
 
             } else {
                 messageDisplay.textContent = responseData.message;

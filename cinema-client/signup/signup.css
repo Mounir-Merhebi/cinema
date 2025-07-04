@@ -102,7 +102,7 @@ body {
     color: #a0a0a0;
 }
 
-/* Date input specific styles */
+
 .form-input[type="date"] {
     color: #a0a0a0;
 }
@@ -202,7 +202,7 @@ body {
     color: #45b7d1;
 }
 
-/* Message Styles - added for consistency with login page */
+
 .response-message {
     padding: 10px 15px;
     margin-bottom: 20px;
@@ -213,14 +213,13 @@ body {
 }
 
 .success-message {
-    background-color: rgba(78, 205, 196, 0.2); /* Light teal */
+    background-color: rgba(78, 205, 196, 0.2); 
     color: #4ecdc4;
     border: 1px solid #4ecdc4;
 }
 
 .error-message {
-    background-color: rgba(255, 107, 107, 0.2); /* Light red */
-    color: #ff6b6b;
+    background-color: rgba(255, 107, 107, 0.2); 
     border: 1px solid #ff6b6b;
 }
 
@@ -230,7 +229,6 @@ body {
 }
 
 
-/* Responsive Design */
 @media (max-width: 768px) {
     body {
         padding: 0.5rem;
