@@ -28,10 +28,10 @@ abstract class Model{
 
         $objects = [];
         while($row = $data->fetch_assoc()){
-            $objects[] = new static($row); //creating an object of type "static" / "parent" and adding the object to the array
+            $objects[] = new static($row); 
         }
 
-        return $objects; //we are returning an array of objects!!!!!!!!
+        return $objects; 
     }
 
 
@@ -86,9 +86,8 @@ abstract class Model{
                 return false;
             }
         }
-        // FIXED: Renamed $data to $executeResult for clarity and correctness
         $executeResult = $query->execute();
-        if ($executeResult === false) { // Used $executeResult here
+        if ($executeResult === false) { 
             error_log("Failed to execute statement: " . $query->error);
             $query->close();
             return false;
@@ -100,10 +99,52 @@ abstract class Model{
         return $newId;
     }
 
-    //you have to continue with the same mindset
-    //Find a solution for sending the $mysqli everytime... 
-    //Implement the following: 
-    //1- update() -> non-static function 
-    //2- create() -> static function
-    //3- delete() -> non-static function 
+    public static function update(mysqli $mysqli, array $data): bool {
+        $table = static::$table;
+        $primary_key = static::$primary_key;
+    
+        if (!isset($data[$primary_key])) {
+            error_log("Primary key '$primary_key' is missing in update data.");
+            return false;
+        }
+    
+        $id = $data[$primary_key];
+        unset($data[$primary_key]);
+    
+        $columns = array_keys($data);
+        $values = array_values($data);
+    
+        $columnArray = [];
+        foreach ($columns as $column) {
+            $columnArray[] = "$column = ?";
+        }
+        $columnsString = implode(', ', $columnArray);
+        $values[] = $id;
+   
+        $types = '';
+        foreach ($values as $value) {
+            if (is_int($value)) {
+                $types .= 'i';
+            } elseif (is_float($value)) {
+                $types .= 'd';
+            } else {
+                $types .= 's';
+            }
+        }
+    
+        $sql = sprintf("UPDATE %s SET %s WHERE %s = ?", $table, $columnsString, $primary_key);
+        $query = $mysqli->prepare($sql);
+        if (!$query) {
+            error_log("Failed to prepare update statement: " . $mysqli->error);
+            return false;
+        }
+    
+        $query->bind_param($types, ...$values);
+        $success = $query->execute();
+        $query->close();
+    
+        return $success;
+    }
+
+    
 }

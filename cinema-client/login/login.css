@@ -110,19 +110,6 @@ body {
     font-size: 0.9rem;
 }
 
-.remember-me {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #a0a0a0;
-}
-
-.remember-me input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    accent-color: #4ecdc4;
-}
-
 .forgot-password {
     color: #4ecdc4;
     text-decoration: none;
@@ -178,7 +165,6 @@ body {
     color: #45b7d1;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     body {
         padding: 0.5rem;

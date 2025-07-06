@@ -15,8 +15,6 @@ body {
     padding: 2rem 1rem;
 }
 
-
-
 .profile-container {
     position: relative;
     z-index: 1;
@@ -154,14 +152,6 @@ select.form-input:focus option {
     position: relative;
 }
 
-.readonly-field::after {
-    content: '👁️';
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 0.6;
-}
 
 .btn {
     padding: 16px 24px;

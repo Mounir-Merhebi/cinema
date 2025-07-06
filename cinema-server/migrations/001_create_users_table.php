@@ -7,7 +7,7 @@ $query = "CREATE TABLE users (
     fullname VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
     mobile_number VARCHAR(20) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL,  -- Storing hashed password; longer size recommended
+    password VARCHAR(255) NOT NULL,  
     date_of_birth DATE,
     communication_prefs VARCHAR(20),
     membership_level VARCHAR(20),

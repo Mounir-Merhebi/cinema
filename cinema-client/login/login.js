@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         messageDisplay.className = ''; 
 
         try {
-            const response = await axios.post('../../cinema-server/controllers/login_controller.php', {
+            const response = await axios.post('http://localhost/cinema/login', {
                 email: email,
                 password: password
             }, {

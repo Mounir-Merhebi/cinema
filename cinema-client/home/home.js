@@ -5,7 +5,7 @@ async function fetchAndDisplayHomeMovies() {
     moviesGrid.innerHTML = '<p class="text-white text-center col-span-full">Loading movies...</p>';
 
     try {
-           const response = await axios.get('../../cinema-server/controllers/get_movies.php');
+           const response = await axios.get('http://localhost/cinema/get_movies');
         const data = response.data;
 
         if (data.success && data.movies.length > 0) {

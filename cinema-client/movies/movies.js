@@ -8,7 +8,7 @@ async function fetchAndDisplayMovies() {
 
     try {
 
-        const response = await axios.get('../../cinema-server/controllers/get_movies.php');
+        const response = await axios.get('http://localhost/cinema/get_movies');
         const data = response.data;
 
         if (data.success && data.movies.length > 0) {

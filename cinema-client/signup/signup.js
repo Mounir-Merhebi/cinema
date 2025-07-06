@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         messageDisplay.className = ''; 
 
         try {
-            const response = await axios.post('../../cinema-server/controllers/signup_controller.php', {
+            const response = await axios.post('http://localhost/cinema/register', {
                 fullname: fullname,
                 email: email,
                 mobile_number: mobile_number, 

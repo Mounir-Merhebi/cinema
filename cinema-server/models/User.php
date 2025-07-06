@@ -17,16 +17,16 @@ class user extends Model{
     protected static string $table = "users";
 
     public function __construct(array $data){
-        $this->id = $data["id"] ?? 0;
-        $this->fullname = $data["fullname"] ?? '';
-        $this->email = $data["email"] ?? '';
-        $this->mobile_number = $data["mobile_number"] ?? '';
-        $this->password = $data["password"] ?? '';
-        $this->date_of_birth = $data["date_of_birth"] ?? '';
-        $this->communication_prefs = $data["communication_prefs"] ?? '';
-        $this->membership_level = $data["membership_level"] ?? '';
-        $this->created_at = $data["created_at"] ?? '';
-        $this->age_verified = $data["age_verified"] ?? 0;
+        $this->id = $data["id"];
+        $this->fullname = $data["fullname"];
+        $this->email = $data["email"];
+        $this->mobile_number = $data["mobile_number"];
+        $this->password = $data["password"];
+        $this->date_of_birth = $data["date_of_birth"];
+        $this->communication_prefs = $data["communication_prefs"];
+        $this->membership_level = $data["membership_level"];
+        $this->created_at = $data["created_at"];
+        $this->age_verified = $data["age_verified"];
     }
 
     public function getId(): int {
@@ -160,7 +160,7 @@ class user extends Model{
     }
 
   
-    }
+}
 
 
 

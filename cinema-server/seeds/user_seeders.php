@@ -1,5 +1,6 @@
 <?php
 require("../connection/connection.php");
+require("../models/User.php");
 
 $users = [
     [
@@ -25,21 +26,5 @@ $users = [
 ];
 
 foreach ($users as $user) {
-    $query = $mysqli->prepare("INSERT INTO users (fullname, email, mobile_number, password, date_of_birth, communication_prefs, membership_level, age_verified) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-    $query->bind_param(
-        "sssssssi",
-        $user['fullname'],
-        $user['email'],
-        $user['mobile_number'],
-        $user['password'],
-        $user['date_of_birth'],
-        $user['communication_prefs'],
-        $user['membership_level'],
-        $user['age_verified']
-    );
-    if ($query->execute()) {
-        echo "User seeded: " . $user['email'] . "<br>";
-    } else {
-        echo "Error: " . $query->error . "<br>";
-    }
+    $newUsers = User::create($mysqli, $user);
 }
